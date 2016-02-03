@@ -1,0 +1,26 @@
+<head>
+  <title>clean</title>
+</head>
+
+<body>
+  <h1>Let's clean the house</h1>
+
+  {{> cleanlist}}
+</body>
+
+<template name="cleanlist">
+	<form class="create-item">
+		<input required name="name" placeholder="item name" />
+		<button>Save</button>
+	</form>
+
+	<ul name="items">
+
+		{{ #each items }}
+		<li class="item"  >
+  			Name : {{name}} <input data-id="{{_id}}" type="checkbox" checked="{{done}}" /> 
+  		</li>
+  		{{ /each }}		
+	</ul>
+  
+</template>

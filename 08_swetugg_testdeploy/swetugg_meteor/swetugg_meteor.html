@@ -1,0 +1,26 @@
+<head>
+  <title>swetugg_meteor</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> items}}
+</body>
+
+<template name="items">
+  An app to demo how easy it is to deploy
+
+  <h3>Create item</h3>
+  <form class="form">
+  	<input name="item" placeholder="enter new item" />
+  	<button>Save</button>
+  </form>
+
+  <h3>Items</h3>
+  {{ #each items}}
+  	<div style="border-bottom: solid 1px lightgray; padding: 10px">
+  		{{name}} <input type="checkbox" checked="{{checked}}" /> <i>{{date}}</i>
+  	</div>
+  {{ /each }}
+</template>

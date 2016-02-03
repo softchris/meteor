@@ -1,0 +1,51 @@
+<head>
+  <title>routing-example</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  
+</body>
+
+<template name="main">
+  <h1>This is the master page</h1>
+
+  {{ > menu }}
+  <div style="border: solid 1px lightgray; padding: 10px; min-height: 300px">
+  	{{ > yield }}	
+  </div>
+  
+  {{ > bottom }}
+  
+
+</template>
+
+<template name="menu">
+	<ul class="menu">
+	  	<li>
+	  		<a href="{{pathFor route='register'}}">register</a>
+	  		<a href="{{pathFor route='login'}}">login</a>
+	  		<a href="{{pathFor route='home'}}">home</a>
+	  	</li>
+  </ul>
+</template>
+<template name="bottom">
+	<p style="border-top: solid 3px lightgray; padding-top: 10px">
+  	Bottom info
+  </p>
+</template>
+
+<template name="home">
+  start page
+</template>
+
+<template name="register">
+  register
+</template>
+
+<template name="login">
+  login
+</template>
+
+

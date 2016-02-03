@@ -1,0 +1,20 @@
+<head>
+  <title>pubsub</title>
+</head>
+
+<body>
+  <h1>Pub subbing</h1>
+
+  {{> todos}}
+</body>
+
+<template name="todos">
+	<ul>
+	{{ #each items }}
+		<li>
+  			{{ name }}
+  		</li>
+  	{{ /each }}		
+	</ul>
+  
+</template>

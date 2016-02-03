@@ -1,0 +1,12 @@
+<template name="listtodos">
+	<h2>list of todos</h2>
+	{{#if todos}}
+		{{ #each todos }}
+			<div>{{ name }} </div>
+		{{ /each }}	
+	
+	{{else}}
+		No todos to show
+	{{/if}}
+	
+</template>

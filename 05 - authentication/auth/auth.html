@@ -1,0 +1,18 @@
+<head>
+  <title>auth</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> loginButtons}}
+  {{> login}}
+  {{> createtodo }}
+  {{> listtodos }}
+</body>
+
+<template name="login">
+  {{#if currentUser}}
+  Logged in as : {{ user }}
+  {{ /if }}
+</template>
+
